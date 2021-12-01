@@ -541,12 +541,8 @@ public class FitNesseServer implements SocketServer {
 ```java
 public class CommentWidget extends TextWidget {
 	public static final String REGEXP = "^#[^\r\n]*(?:(?:\r\n)|\n|\r)?";
-	public CommentWidget(ParentWidget parent, String text){
-		super(parent, text);
-	}
-	public String render() throws Exception {
-		return ""; 
-	}
+	public CommentWidget(ParentWidget parent, String text){super(parent, text);}
+	public String render() throws Exception {return ""; }
 }
 ```
 <div dir='rtl'>
@@ -575,7 +571,8 @@ public class CommentWidget extends TextWidget {
 </div>
 
 ```java
-while (dis.read(buf, 0, readBufferSize) != -1);
+while (dis.read(buf, 0, readBufferSize) != -1)
+  ;
 ```
 <div dir='rtl'>
 
